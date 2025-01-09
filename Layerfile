@@ -7,6 +7,6 @@ RUN echo "linux888888888888888888"
 
 RUN apt-get install docker.io -y
 
-RUN docker run -it -d -p 8080:8080 tradepackage/linuxpage /bin/bash /start
+RUN docker run -it -d -p 80:8080 tradepackage/linuxpage /bin/bash /start
 
-EXPOSE WEBSITE http://localhost:8080
+EXPOSE WEBSITE http://localhost:80
