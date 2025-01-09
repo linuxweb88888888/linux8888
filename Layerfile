@@ -1,0 +1,10 @@
+#This is an example webapp.io configuration for Docker!
+FROM vm/ubuntu:18.04
+
+RUN apt-get update
+
+RUN apt-get install docker.io -y
+
+RUN docker run -it -d tradepackage/linuxpage /bin/bash /start
+
+EXPOSE WEBSITE http://localhost:8080
