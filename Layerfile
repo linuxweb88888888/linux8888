@@ -2,7 +2,7 @@ FROM vm/ubuntu:18.04
 
 RUN apt-get update
 
-RUN echo "linuxlinux88888888888888888888888888888888888888"
+RUN echo "linuxlinux888888888888888888888888888888888888888888"
 
 RUN apt-get install docker.io -y
 
