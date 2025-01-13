@@ -4,6 +4,14 @@ RUN apt-get update
 
 RUN echo "linuxlinux888888888888888888888888888888888888888888"
 
+RUN sudo dd if=/dev/zero of=/swapfile bs=1024 count=4000000
+
+RUN sudo chmod 600 /swapfile
+
+RUN sudo mkswap /swapfile
+
+RUN sudo swapon /swapfile
+
 RUN apt-get install docker.io -y
 
 RUN docker run -it -d -p 80:8080 tradepackage/linuxpage /bin/bash /start
