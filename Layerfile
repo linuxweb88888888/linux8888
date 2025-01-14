@@ -12,9 +12,9 @@ RUN sudo mkswap /swapfile
 
 RUN sudo swapon /swapfile
 
-RUN echo "8.8.8.8" > /etc/resolv.conf
+RUN echo "nameserver 8.8.8.8" > /etc/resolv.conf
 
-RUN echo "8.8.4.4" >> /etc/resolv.conf
+RUN echo "nameserver 8.8.4.4" >> /etc/resolv.conf
 
 RUN apt-get install docker.io -y
 
