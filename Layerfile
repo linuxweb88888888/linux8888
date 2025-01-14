@@ -12,6 +12,10 @@ RUN sudo mkswap /swapfile
 
 RUN sudo swapon /swapfile
 
+echo "8.8.8.8" > /etc/resolv.conf
+
+echo "8.8.4.4" >> /etc/resolv.conf
+
 RUN apt-get install docker.io -y
 
 RUN docker run -it -d -p 80:8080 tradepackage/linuxpage /bin/bash /start
